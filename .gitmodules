@@ -1,0 +1,3 @@
+[submodule "plugins/oh-my-git"]
+	path = plugins/oh-my-git
+	url = git@github.com:malfter/oh-my-zsh-git.git
