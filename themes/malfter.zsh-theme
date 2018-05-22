@@ -8,7 +8,7 @@
 prompt_status() {
   local symbols
   symbols=()
-  [[ $RETVAL -ne 0 ]] && symbols+="%{%F{red}%}✘" || symbols+="%{%F{green}%}\u2713"
+  [[ $RETVAL -ne 0 ]] && symbols+="%{%F{red}%}✘" || symbols+="%{%F{green}%}✓"
   [[ $UID -eq 0 ]] && symbols+="%{%F{yellow}%}⚡"
   [[ $(jobs -l | wc -l) -gt 0 ]] && symbols+="%{%F{cyan}%}⚙"
 
@@ -100,7 +100,10 @@ prompt_oh-my-git() {
 }
 
 build_prompt() {
+  NEW_LINE=$'\n'
+
   RETVAL=$?
+  PROMPT='%{%f%b%k%}'
   prompt_status
   prompt_time
   prompt_virtualenv
@@ -111,7 +114,8 @@ build_prompt() {
   prompt_bzr
   prompt_hg
   prompt_end
+  PROMPT+='${NEW_LINE}> '
 }
 
-NEW_LINE=$'\n'
-PROMPT='%{%f%b%k%}$(build_prompt) ${NEW_LINE}> '
+autoload -U add-zsh-hook
+add-zsh-hook precmd build_prompt
