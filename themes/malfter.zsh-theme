@@ -8,7 +8,7 @@
 prompt_status() {
   local symbols
   symbols=()
-  [[ $RETVAL -ne 0 ]] && symbols+="%{%F{red}%}✘" || symbols+="%{%F{green}%}✓"
+  [[ $RETVAL -ne 0 ]] && symbols+="%{%F{red}%}✘ ($RETVAL)" || symbols+="%{%F{green}%}✓"
   [[ $UID -eq 0 ]] && symbols+="%{%F{yellow}%}⚡"
   [[ $(jobs -l | wc -l) -gt 0 ]] && symbols+="%{%F{cyan}%}⚙"
 
@@ -100,8 +100,6 @@ prompt_oh-my-git() {
 }
 
 build_prompt() {
-  NEW_LINE=$'\n'
-
   RETVAL=$?
   PROMPT='%{%f%b%k%}'
   prompt_status
@@ -114,6 +112,7 @@ build_prompt() {
   prompt_bzr
   prompt_hg
   prompt_end
+  NEW_LINE=$'\n'
   PROMPT+='${NEW_LINE}> '
 }
 
