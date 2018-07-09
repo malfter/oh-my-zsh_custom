@@ -101,7 +101,6 @@ prompt_oh-my-git() {
 
 build_prompt() {
   RETVAL=$?
-  PROMPT='%{%f%b%k%}'
   prompt_status
   prompt_time
   prompt_virtualenv
@@ -112,9 +111,9 @@ build_prompt() {
   prompt_bzr
   prompt_hg
   prompt_end
-  NEW_LINE=$'\n'
-  PROMPT+='${NEW_LINE}> '
 }
 
-autoload -U add-zsh-hook
-add-zsh-hook precmd build_prompt
+PROMPT='%{%f%b%k%}$(build_prompt) '
+
+NEW_LINE=$'\n'
+PROMPT+='${NEW_LINE}> '
