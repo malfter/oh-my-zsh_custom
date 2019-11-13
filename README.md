@@ -9,7 +9,7 @@ This project contains user-specific customizations and extensions to the origina
 
 Clone the repository:
 ```bash
-git clone https://github.com/malfter/oh-my-zsh_custom.git ~/.oh-my-zsh_custom
+git clone https://gitlab.com/malfter/oh-my-zsh_custom.git ~/.oh-my-zsh_custom
 ```
 
 and configure `Oh My Zsh` to use a new custom folder:
