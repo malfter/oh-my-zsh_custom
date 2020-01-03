@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="oh-my-zsh-logo.png" alt="Oh My Zsh">
+</p>
+
 # Oh My Zsh (Custom)
 
 This project contains user-specific customizations and extensions to the original project [Oh My Zsh](https://ohmyz.sh/)
