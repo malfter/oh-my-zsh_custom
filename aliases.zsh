@@ -1,6 +1,6 @@
 # Misc
 alias file2clip='f() { xclip -sel clip < $1 };f'
-alias upgrade_os='sudo apt update && sudo apt full-upgrade && sudo needrestart'
+alias upgrade_os='sudo apt update && sudo apt full-upgrade'
 alias upgrade_dotfiles='PWD_OLD=$(pwd) && echo -n "Upgrade dotfiles: " && cd ~/.homesick/repos/dotfiles && git pull -p && echo -n "Upgrade oh-my-zsh_custom: " && cd ~/.oh-my-zsh_custom && git pull -p && cd $PWD_OLD'
 alias hostsconfig="sudo $EDITOR /etc/hosts"
 alias mux="tmuxinator"
