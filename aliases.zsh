@@ -4,6 +4,12 @@ alias upgrade_os='sudo apt update && sudo apt full-upgrade'
 alias upgrade_dotfiles='PWD_OLD=$(pwd) && echo -n "Upgrade dotfiles: " && cd ~/.homesick/repos/dotfiles && git pull -p && echo -n "Upgrade oh-my-zsh_custom: " && cd ~/.oh-my-zsh_custom && git pull -p && cd $PWD_OLD'
 alias hostsconfig="sudo $EDITOR /etc/hosts"
 alias mux="tmuxinator"
+alias gfind="find -not -iwholename '*.git/*'"
+alias sslyze="docker run --rm -it nablac0d3/sslyze"
+
+# SSH
+alias sshconfig="$EDITOR ~/.ssh/config"
+alias sshnokey="ssh -o PreferredAuthentications=password -o PubkeyAuthentication=no -o PasswordAuthentication=yes -o IdentitiesOnly=yes "
 
 # Vagrant
 alias vg="vagrant"
