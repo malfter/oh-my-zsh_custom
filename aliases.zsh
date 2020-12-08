@@ -9,6 +9,7 @@ alias ta2="cd ~/git/int/telegra-admin2"
 alias ad="cd ~/git/gitlab/ansible-desktop"
 alias gfind="find -not -iwholename '*.git/*'"
 alias sslyze="docker run --rm -it nablac0d3/sslyze"
+alias htrace.sh="docker run --rm -it --name htrace.sh htrace.sh"
 
 # SSH
 alias sshconfig="$EDITOR ~/.ssh/config"
