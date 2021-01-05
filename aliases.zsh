@@ -11,6 +11,8 @@ alias gfind="find -not -iwholename '*.git/*'"
 alias sslyze="docker run --rm -it nablac0d3/sslyze"
 alias htrace.sh="docker run --rm -it --name htrace.sh htrace.sh"
 
+alias gitignore="f() { curl -sLw "\n" https://www.toptal.com/developers/gitignore/api/\$@ ;}; f"
+
 # SSH
 alias sshconfig="$EDITOR ~/.ssh/config"
 alias sshnokey="ssh -o PreferredAuthentications=password -o PubkeyAuthentication=no -o PasswordAuthentication=yes -o IdentitiesOnly=yes "
