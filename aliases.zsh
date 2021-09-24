@@ -26,10 +26,9 @@ alias vgd="vagrant destroy -f"
 alias aencryptvar="ansible-vault encrypt_string --encrypt-vault-id=default --vault-password-file .vaultpass --name "
 alias aencryptfile="ansible-vault encrypt --encrypt-vault-id=default --vault-password-file .vaultpass "
 alias aencryptfile2str="ansible-vault encrypt_string \"\$@\" --vault-password-file .vaultpass --stdin-name \"varname\" < "
-alias aplay_vag="ansible-playbook --user=ansible --vault-password-file=.vaultpass --inventory=./ansible/env_vag "
-alias aplay_tst="ansible-playbook --user=ansible --vault-password-file=.vaultpass --inventory=./ansible/env_tst "
-alias aplay_stg="ansible-playbook --user=ansible --vault-password-file=.vaultpass --inventory=./ansible/env_stg "
-alias aplay_prd="ansible-playbook --user=ansible --vault-password-file=.vaultpass --inventory=./ansible/env_prd "
+alias aplay_test="ansible-playbook --user=vagrant --vault-password-file=.vaultpass --inventory=./ansible/env_test "
+alias aplay_qa="ansible-playbook --user=vagrant --vault-password-file=.vaultpass --inventory=./ansible/env_qa "
+alias aplay_prod="ansible-playbook --user=vagrant --vault-password-file=.vaultpass --inventory=./ansible/env_prod "
 
 # Dell
 alias dellservicetag="sudo dmidecode | grep \"System Information\" -A4"
