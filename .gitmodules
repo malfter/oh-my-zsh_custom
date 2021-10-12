@@ -1,3 +1,6 @@
 [submodule "plugins/oh-my-git"]
 	path = plugins/oh-my-git
 	url = git@github.com:malfter/oh-my-zsh-git.git
+[submodule "plugins/zsh-kubectl-prompt"]
+	path = plugins/zsh-kubectl-prompt
+	url = https://github.com/superbrothers/zsh-kubectl-prompt.git

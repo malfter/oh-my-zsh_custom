@@ -114,6 +114,17 @@ build_prompt() {
   prompt_end
 }
 
+right_prompt() {
+  local color="blue"
+
+  if [[ "$ZSH_KUBECTL_USER" =~ "admin" ]]; then
+    color=red
+  fi
+
+  echo "%{$fg[$color]%}($ZSH_KUBECTL_PROMPT)%{$reset_color%}"
+}
+
+RPROMPT='%{$fg[blue]%}($ZSH_KUBECTL_PROMPT)%{$reset_color%}'
 PROMPT='%{%f%b%k%}$(build_prompt) '
 
 NEW_LINE=$'\n'
