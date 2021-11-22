@@ -114,7 +114,7 @@ build_prompt() {
   prompt_end
 }
 
-PROMPT='%{%f%b%k%}$(build_prompt) '
+PROMPT='%{%f%b%k%}$(build_prompt) $(kube_ps1)'
 
 NEW_LINE=$'\n'
 PROMPT+='${NEW_LINE}> '
