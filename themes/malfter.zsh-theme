@@ -100,6 +100,13 @@ prompt_oh-my-git() {
   fi
 }
 
+prompt_kube_ps1() {
+  if kubectl config current-context &> /dev/null; then
+    echo " $(kube_ps1)"
+    #prompt_segment black default "$(kube_ps1)"
+  fi
+}
+
 build_prompt() {
   RETVAL=$?
   prompt_status
@@ -112,9 +119,10 @@ build_prompt() {
   prompt_bzr
   prompt_hg
   prompt_end
+  prompt_kube_ps1
 }
 
-PROMPT='%{%f%b%k%}$(build_prompt) $(kube_ps1)'
+PROMPT='%{%f%b%k%}$(build_prompt)'
 
 NEW_LINE=$'\n'
 PROMPT+='${NEW_LINE}> '
