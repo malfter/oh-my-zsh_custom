@@ -1,1 +1,3 @@
 /tmp
+# Ignore config files which should not visible in public repository
+*.gitignore.zsh
