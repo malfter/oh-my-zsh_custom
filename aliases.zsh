@@ -1,3 +1,8 @@
+# zsh
+alias zshconfig="$EDITOR $HOME/.zshrc"
+alias zshsource=". $HOME/.zshrc"
+alias zshaliases="$EDITOR $HOME/.oh-my-zsh_custom/aliases.zsh"
+
 # Misc
 alias file2clip='f() { xclip -sel clip < $1 };f'
 alias upgrade_os='sudo apt update && sudo apt full-upgrade'
@@ -29,6 +34,7 @@ alias aencryptfile2str="ansible-vault encrypt_string \"\$@\" --vault-password-fi
 alias aplay_test="ansible-playbook --user=vagrant --vault-password-file=.vaultpass --inventory=./ansible/env_test "
 alias aplay_qa="ansible-playbook --user=vagrant --vault-password-file=.vaultpass --inventory=./ansible/env_qa "
 alias aplay_prod="ansible-playbook --user=vagrant --vault-password-file=.vaultpass --inventory=./ansible/env_prod "
+alias aplay_prd="ansible-playbook --vault-password-file=.vaultpass --inventory=./ansible/env_prd "
 
 # Dell
 alias dellservicetag="sudo dmidecode | grep \"System Information\" -A4"

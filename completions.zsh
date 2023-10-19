@@ -1,0 +1,5 @@
+type kubectl &> /dev/null   && source <(kubectl completion zsh)
+type kustomize &> /dev/null && source <(kustomize completion zsh)
+type helm &> /dev/null      && source <(helm completion zsh)
+type hcloud &> /dev/null    && source <(hcloud completion zsh)
+type k3d &> /dev/null       && source <(k3d completion zsh)
