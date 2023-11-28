@@ -17,6 +17,9 @@ alias htrace.sh="docker run --rm -it --name htrace.sh htrace.sh"
 
 alias gitignore="f() { curl -sLw "\n" https://www.toptal.com/developers/gitignore/api/\$@ ;}; f"
 
+alias gl="find ${HOME}/git -name .git -type d | rev | cut -d'/' -f2- | rev"
+alias gcd="cd -- \$(gl | fzf)"
+
 # SSH
 alias sshconfig="$EDITOR ~/.ssh/config"
 alias sshnokey="ssh -o PreferredAuthentications=password -o PubkeyAuthentication=no -o PasswordAuthentication=yes -o IdentitiesOnly=yes "
