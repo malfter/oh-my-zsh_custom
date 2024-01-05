@@ -1,9 +1,9 @@
 [submodule "plugins/oh-my-git"]
 	path = plugins/oh-my-git
-	url = git@github.com:malfter/oh-my-zsh-git.git
+	url = https://github.com/malfter/oh-my-zsh-git.git
 [submodule "plugins/zsh-autosuggestions"]
 	path = plugins/zsh-autosuggestions
-	url = https://github.com/zsh-users/zsh-autosuggestions
+	url = https://github.com/zsh-users/zsh-autosuggestions.git
 [submodule "plugins/zsh-syntax-highlighting"]
 	path = plugins/zsh-syntax-highlighting
 	url = https://github.com/zsh-users/zsh-syntax-highlighting.git
