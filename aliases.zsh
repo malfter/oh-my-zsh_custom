@@ -14,6 +14,7 @@ alias ad="cd ~/git/gitlab/ansible-desktop"
 alias gfind="find -not -iwholename '*.git/*'"
 alias sslyze="docker run --rm -it nablac0d3/sslyze"
 alias htrace.sh="docker run --rm -it --name htrace.sh htrace.sh"
+alias jwtdecode='f() { echo "$1" | jq -R "split(\".\") | .[1] | @base64d | fromjson"; }; f'
 
 alias gitignore="f() { curl -sLw "\n" https://www.toptal.com/developers/gitignore/api/\$@ ;}; f"
 
