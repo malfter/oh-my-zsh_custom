@@ -25,5 +25,7 @@ function gclone() {
 
     local clone_path="${full_root_path}/${git_group_path}"
     mkdir -p "${clone_path}"
-    cd "${clone_path}" && git clone "${git_url}"
+    pushd "${clone_path}"
+    git clone "${git_url}"
+    popd
 }
